@@ -1,0 +1,30 @@
+SELECT CPF AS CPF_CLIENTE, NOME AS NOME_CLIENTE FROM tbclient   ( Na vizualização eu troco o nome do campo)
+
+SELECT CPF, NOME FROM tbclient LIMIT 5;   ( Aqui eu estou limitando a quantidade de dados em 5)
+
+
+UPDATE tbproduto SET EMBALAGEM = 'Lata', PRECO_LISTA = 2.46
+WHERE PRODUTO = '544931' ( AQUI EU ESTOU ATUALIZANDO O VALOR DA COLUNA EMBALAGEM E PRECO_LISTA NA TABELA tbproduto
+
+As letras apresentam ordem de grandeza, por exemplo se eu colocar WHERE NOME > Fernando, A < B < C < D < E < F < G.
+-Podemos usa <= >=, >,< e <>
+
+Se a coluna for um float, eu vizualizo o numero 16.008, se eu colocar o PRECO = ou <> 16.008, não vai achar, pois é flutuante.
+-Mais facil usar o <, > etc ou se quiser extamente igual, é necessário usar o decimal ou até mesmo usar o BETWEEN de 16.007 AND 16.009
+
+Para usar fltro com data, podemos usar com a correspondecia = 'AAAA/MM/DD' ou os operadores de grande, funciona normalmente.
+é possivel usar também SELECT * FROM tbcliente WHERE YEAR(DATA_NASCIMENTO) = 1995; ( ou seja, tamo pegando só o ano), podemos usar também meses.
+
+
+=========FILTROS COMPOSTOS=======
+
+SELECT * FROM tbproduto WHERE PRECO_LISTA BETWEEN 16.007 AND 16.009;
+
+SELECT * FROM tbproduto WHERE IDADE <22 AND SEXO = 'M';
+
+SELECT * FROM tbproduto WHERE cidade = 'Rio de Janeiro' OR BAIRRO = 'Jardins'
+
+
+
+
+
